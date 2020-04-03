@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './App.css';
 
 function Todo({ todo, index }) {
   return (
@@ -9,7 +10,7 @@ function Todo({ todo, index }) {
 }
 
 function App() {
-  const [todos, setTodos] = useState([
+  const [todos /*state*/, setTodos/*method to update the state*/] = useState([
     {
       text: 'Learn about React',
       isCompleted: false,
@@ -33,9 +34,7 @@ function App() {
       <div className="todo-list">
         {todos.map((todo, index) => (
           <Todo key={index} index={index} todo={todo} />
-        )
-
-        )}
+        ))}
 
       </div>
     </div>
