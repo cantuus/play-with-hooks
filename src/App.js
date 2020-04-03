@@ -64,7 +64,7 @@ function App() {
   const completeTodo = index => {
     const newTodos = [...todos];
     newTodos[index].isCompleted = !newTodos[index].isCompleted;
-    setTodos(newTodos);
+    setTodos(newTodos); //set the state
   }
 
 
@@ -72,7 +72,7 @@ function App() {
     <div className="app">
       <div className="todo-list">
         {todos.map((todo, index) => (
-          <Todo key={index} index={index} todo={todo} />
+          <Todo key={index} index={index} todo={todo} completeTodo={completeTodo} />
         ))}
 
         <TodoForm addTodo={addTodo} />
